@@ -1,4 +1,4 @@
-package wrr
+package wrrimpl
 
 import "sync"
 

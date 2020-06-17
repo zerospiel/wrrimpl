@@ -1,4 +1,4 @@
-package wrr
+package wrrimpl
 
 import (
 	"math/rand"
@@ -10,7 +10,7 @@ var _ WRR = (*randomRr)(nil)
 
 var rsource = rand.New(rand.NewSource(time.Now().UnixNano()))
 
-// NewEDF creates returns and instance of a struct that implements WRR logic.
+// NewRandom creates returns and instance of a struct that implements WRR logic.
 // This constructor basics on random item's weight picking within all weights of the set of items.
 func NewRandom() WRR {
 	return &randomRr{}

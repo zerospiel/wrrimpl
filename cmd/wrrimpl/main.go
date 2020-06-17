@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/zerospiel/wrrimpl/wrr"
+	"github.com/zerospiel/wrrimpl"
 )
 
 type foobar struct {
@@ -11,11 +11,11 @@ type foobar struct {
 }
 
 func main() {
-	edf := wrr.NewEDF()
+	edf := wrrimpl.NewEDF()
 	edf.Add(foobar{s: "hello"}, 70)
 	edf.Add(foobar{s: "world"}, 30)
 
-	random := wrr.NewRandom()
+	random := wrrimpl.NewRandom()
 	random.Add(foobar{s: "hello"}, 70)
 	random.Add(foobar{s: "world"}, 30)
 
